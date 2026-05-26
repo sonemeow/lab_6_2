@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV — Your Name</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="cv">
+      <header class="cv__header">
+        <h1>Your Name</h1>
+        <p class="cv__tagline">
+          One-line summary. Who you are, what you do, what you want next.
+        </p>
+        <ul class="cv__contacts">
+          <li><a href="mailto:you@example.com">you@example.com</a></li>
+          <li><a href="https://github.com/yourname">github.com/yourname</a></li>
+        </ul>
+
+        <!-- TODO: твой нестандартный элемент.
+             Пример: переключатель темы, anim, easter egg. -->
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+          🌗
+        </button>
+      </header>
+
+      <section>
+        <h2>About</h2>
+        <p>
+          Two or three sentences. What you care about, what you've shipped,
+          where you're heading.
+        </p>
+      </section>
+
+      <section>
+        <h2>Experience / Projects</h2>
+        <article>
+          <h3>Project / Role Title</h3>
+          <p class="cv__meta">Company / Context · 2024 — now</p>
+          <p>What you did. Why it mattered. What shipped.</p>
+        </article>
+        <article>
+          <h3>Another One</h3>
+          <p class="cv__meta">Context · 2023</p>
+          <p>Same shape. Keep it tight.</p>
+        </article>
+      </section>
+
+      <section>
+        <h2>Skills</h2>
+        <ul class="cv__skills">
+          <li>JavaScript</li>
+          <li>Git</li>
+          <li>CI/CD</li>
+          <li>Other thing you actually know</li>
+        </ul>
+      </section>
+    </main>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
