@@ -1,63 +1,252 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CV — Your Name</title>
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <main class="cv">
-      <header class="cv__header">
-        <h1>Your Name</h1>
-        <p class="cv__tagline">
-          One-line summary. Who you are, what you do, what you want next.
-        </p>
-        <ul class="cv__contacts">
-          <li><a href="mailto:you@example.com">you@example.com</a></li>
-          <li><a href="https://github.com/yourname">github.com/yourname</a></li>
-        </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sonya — Creative developer, cat enthusiast, and maker of delightful things." />
+  <title>Софа · Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="cursor-paw" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
 
-        <!-- TODO: твой нестандартный элемент.
-             Пример: переключатель темы, anim, easter egg. -->
-        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-          🌗
-        </button>
-      </header>
+  <nav class="nav" id="nav">
+    <a href="#hero" class="nav-logo">Софа<span class="nav-logo-paw">🐾</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">Обо мне</a></li>
+      <li><a href="#skills">Навыки</a></li>
+      <li><a href="#contact">Контакты</a></li>
+    </ul>
+  </nav>
 
-      <section>
-        <h2>About</h2>
-        <p>
-          Two or three sentences. What you care about, what you've shipped,
-          where you're heading.
-        </p>
-      </section>
+  <header class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-orb hero-orb--1"></div>
+      <div class="hero-orb hero-orb--2"></div>
+      <div class="floating-cat floating-cat--1" aria-hidden="true">🐱</div>
+      <div class="floating-cat floating-cat--2" aria-hidden="true">😺</div>
+      <div class="floating-cat floating-cat--3" aria-hidden="true">🐾</div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-greeting">всем привет! я -</p>
+      <h1 class="hero-title">
+        <span class="hero-name" id="typedName" data-name="Софа">Софа</span>
+        <span class="hero-cursor">|</span>
+      </h1>
+      <p class="hero-tagline">Тихо радуюсь закатам, кошкам и тёплым вечерам</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn--primary">Мои навыки</a>
+        <a href="#contact" class="btn btn--ghost">Связаться</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num" data-count="19">0</span>
+          <span class="hero-stat-label">Бессонных ночей за месяц</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num" data-count="79">0</span>
+          <span class="hero-stat-label">Раз сказала «ещё 5 минут» и пролежала час</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num" data-count="100">0</span>
+          <span class="hero-stat-label">Планов на день, разрушенных к обеду</span>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="hero-scroll" aria-label="Scroll down">
+      <span>Scroll</span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </a>
+  </header>
 
-      <section>
-        <h2>Experience / Projects</h2>
-        <article>
-          <h3>Project / Role Title</h3>
-          <p class="cv__meta">Company / Context · 2024 — now</p>
-          <p>What you did. Why it mattered. What shipped.</p>
-        </article>
-        <article>
-          <h3>Another One</h3>
-          <p class="cv__meta">Context · 2023</p>
-          <p>Same shape. Keep it tight.</p>
-        </article>
-      </section>
+  <main>
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Обо мне</span>
+          <h2 class="section-title">Небольшая история про меня</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-image-wrap">
+            <!-- Положите файл в папку images/ (например images/sonya.jpg) и укажите то же имя в src -->
+            <img
+              class="about-photo"
+              src="images/4.jpg"
+              alt="Софа"
+              width="480"
+              height="600"
+            />
+            <div class="about-badge">Живу в гармонии с собой</div>
+          </div>
+          <div class="about-text">
+            <p class="about-lead">
+              Я родилась и выросла в Тернее — крошечном посёлке в Приморском крае, затерянном между лесом и морем. Всё детство я прожила буквально в лесу, в полной гармонии с природой, рядом с любящей семьёй и домом, который всегда был моим надёжным причалом.
+            </p>
+            <p>
+              Я много училась, ходила в кружки, старалась впитывать всё, что можно. А потом случился переезд: я хорошо сдала ЕГЭ и поступила в Политех — в огромный, почти незнакомый город на другом конце страны. Сначала было страшно и непривычно. Но со временем я освоилась, нашла настоящих друзей и поняла, что мне здесь правда нравится.
+            </p>
+            <p>
+              Конечно, сейчас я тоскую по дому. Мне до сих пор снятся лес и море. Но передо мной открылось море возможностей — и у меня правда загорелись глаза. Это был большой риск — уехать так далеко. Но я ни разу не пожалела.
+            </p>
+            <ul class="about-facts">
+              <li><strong>Сейчас:</strong> Учусь в Политехе, привыкаю к городу и влюбляюсь в новые возможности</li>
+              <li><strong>Факт:</strong> В моём сердце живут два дома. Один у моря, другой в городе возможностей</li>
+              <li><strong>Моя суперсила:</strong> Не бояться рисковать и идти туда, где страшно и интересно</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+   <section class="section scratch" id="secret">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="section-label">Секрет</span>
+          <h2 class="section-title">Потри — узнаешь</h2>
+          <p class="section-desc">То, что обычно не показываю</p>
+        </div>
+        <div class="scratch-wrap">
+          <div class="scratch-card" id="scratchCard">
+            <div class="scratch-reveal" aria-hidden="false">
+              <span class="scratch-reveal-icon">🐱</span>
+              <p class="scratch-reveal-label">секретики</p>
+              <p class="scratch-secret" id="scratchSecret">
+                Я слишком открыта людям, поэтому часто обжигаюсь. Романтичная и ранимая. Не всегда успеваю за своим же темпом, сомневаюсь в себе и мучаюсь с выбором.
+              </p>
+            </div>
+            <canvas
+              class="scratch-canvas"
+              id="scratchCanvas"
+              aria-label="Потрите поверхность, чтобы открыть скрытый текст"
+            ></canvas>
+            <span class="scratch-progress" id="scratchProgress" aria-live="polite">0%</span>
+          </div>
+          <div class="scratch-actions">
+            <button type="button" class="btn btn--ghost scratch-skip" id="scratchSkip">
+              Открыть без стирания
+            </button>
+            <button type="button" class="btn btn--ghost scratch-reset" id="scratchReset" hidden>
+              Стереть слой снова
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <section>
-        <h2>Skills</h2>
-        <ul class="cv__skills">
-          <li>JavaScript</li>
-          <li>Git</li>
-          <li>CI/CD</li>
-          <li>Other thing you actually know</li>
-        </ul>
-      </section>
-    </main>
+    <section class="section skills" id="skills">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <span class="section-label">Навыки</span>
+          <h2 class="section-title">Всё, что я успела до 18</h2>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-card">
+            <h3>🌿 Наука и экология</h3>
+            <p>С 12 лет писала научные работы. Выступала на конференциях от региональных до международных — всегда с призовыми. Участвовала в командных экопроектах.</p>
+          </article>
+          <article class="skill-card">
+            <h3>🎵 Спорт и музыка</h3>
+            <p>5 лет настольного тенниса + волейбол до сих пор. Вокал, фортепиано, хор — и сама освоила укулеле с гитарой. Записала каверы и выпустила свою песню.</p>
+          </article>
+          <article class="skill-card">
+            <h3>📚 Учёба и достижения</h3>
+            <p>Золотая медаль, стипендия губернатора, путёвки за заслуги — так объездила полстраны. 90 баллов за профильную математику.</p>
+          </article>
+          <article class="skill-card">
+            <h3>💻 Сейчас</h3>
+            <p>Политех, программирование. Новая сфера — и она мне очень нравится.</p>
+          </article>
+        </div>
+        <div class="skills-tags">
+          <span>Спорт</span><span>Наука</span><span>Экология</span><span>Музыка</span>
+          <span>Своя песня</span><span>Золотая медаль</span><span>Политех</span>
+        </div>
+      </div>
+    </section>
 
-    <script type="module" src="./src/main.js"></script>
-  </body>
+    <section class="section cats" id="cats">
+      <div class="container">
+        <div class="feed-game reveal" id="feed-game">
+          <div class="feed-game-header">
+            <span class="section-label">Интерактив</span>
+            <h3 class="feed-game-title">Покорми кота</h3>
+            <p class="feed-game-desc">Здесь живёт кот — моё тотемное животное. Это очевидно, ведь я sonemeow. Мы связаны: если он сыт — у меня всё хорошо. Поэтому я его кормлю. На всякий случай.</p>
+          </div>
+          <div class="feed-game-panel">
+            <div class="feed-stage" id="feedStage">
+              <div class="feed-cat-wrap">
+                <div class="feed-cat" id="feedCat" aria-live="polite">😿</div>
+                <div class="feed-hearts" id="feedHearts" aria-hidden="true"></div>
+              </div>
+              <p class="feed-bubble" id="feedBubble" hidden></p>
+              <p class="feed-bubble">Сытость кота:</p>
+              <div class="feed-meter" role="progressbar" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" id="feedMeter">
+                <div class="feed-meter-fill" id="feedMeterFill"></div>
+              </div>
+              <p class="feed-stats">
+                Вкусняшек: <strong id="treatCount">0</strong> / <span id="treatGoal">10</span>
+                <span class="feed-mood-label" id="feedMoodLabel">· голоден</span>
+              </p>
+            </div>
+            <div class="feed-controls">
+              <button type="button" class="btn btn--primary" id="feedBtn">Дать вкусняшку</button>
+              <button type="button" class="btn btn--ghost" id="petBtn">Погладить</button>
+              <button type="button" class="btn btn--ghost feed-reset" id="feedResetBtn">Начать с нуля</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <div class="contact-content">
+            <span class="section-label">Контакты</span>
+            <h2 class="section-title">Напиши мне</h2>
+            <p>Я отвечаю на письма. Не всегда быстро, но всегда от души.</p>
+            <div class="contact-links">
+              <a href="mailto:gamma1242@mail.ru" class="contact-link">
+                <span class="contact-icon">✉️</span>
+                gamma1242@mail.ru
+              </a>
+              <a href="https://github.com/sonemeow" class="contact-link" target="_blank" rel="noopener noreferrer">
+                <span class="contact-icon">💻</span>
+                github.com/sonemeow
+              </a>
+              <a href="https://t.me/sonemeow" class="contact-link" target="_blank" rel="noopener noreferrer">
+                <span class="contact-icon">✈️</span>
+                t.me/sonemeow
+              </a>
+            </div>
+          </div>
+          <form class="contact-form" id="contactForm">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@email.com" required />
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tell me about your project (cat photos optional but appreciated)…" required></textarea>
+            <button type="submit" class="btn btn--primary btn--full">Send message 🐾</button>
+            <p class="form-note" id="formNote" hidden>Thanks! This is a demo — wire it to your backend or Formspree later.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Сделано с душой и лапой · © <span id="year"></span> Софа</p>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+  </footer>
+
+  <script src="src/main.js?v=6"></script>
+</body>
 </html>
